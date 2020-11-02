@@ -1,0 +1,1 @@
+folder "commons" contains files that will be COMMON around all pages such as font, logo etc.

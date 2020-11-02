@@ -1,0 +1,2 @@
+folder "index" contains files that will only be in index-page such as font, css, js etc.
+
