@@ -1,3 +1,3 @@
-call scripts\activate
+call scripts\activate _EXTERN
 cd library_webapp
 manage.py runserver
