@@ -1,5 +1,9 @@
 @echo off
 
+:: USE THE quick_runserver.bat AS POSSSIBLE -kyle
+set _ARGGS=%1
+if not "%_ARGGS%" =="_EXTERN" goto :END
+
 rem This file is UTF-8 encoded, so we need to update the current code page while executing it
 for /f "tokens=2 delims=:." %%a in ('"%SystemRoot%\System32\chcp.com"') do (
     set _OLD_CODEPAGE=%%a
@@ -8,7 +12,8 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set VIRTUAL_ENV=C:\Programming\python\Applications Developement\library_web-app
+:: DEFAULT VALUE: VIRTUAL_ENV=C:/some_dir../... /venv_folder/ -kyle
+set VIRTUAL_ENV=%cd%
 
 if not defined PROMPT set PROMPT=$P$G
 
@@ -16,7 +21,7 @@ if defined _OLD_VIRTUAL_PROMPT set PROMPT=%_OLD_VIRTUAL_PROMPT%
 if defined _OLD_VIRTUAL_PYTHONHOME set PYTHONHOME=%_OLD_VIRTUAL_PYTHONHOME%
 
 set _OLD_VIRTUAL_PROMPT=%PROMPT%
-set PROMPT=(library_web-app) %PROMPT%
+set PROMPT=(library_web-app_env) %PROMPT%
 
 if defined PYTHONHOME set _OLD_VIRTUAL_PYTHONHOME=%PYTHONHOME%
 set PYTHONHOME=
@@ -27,6 +32,9 @@ if not defined _OLD_VIRTUAL_PATH set _OLD_VIRTUAL_PATH=%PATH%
 set PATH=%VIRTUAL_ENV%\Scripts;%PATH%
 
 :END
+:: DI KO KA HANDLE SA CONFLICT MAO RANI AKO MAHUNA-HUNA-AN
+if not "%_ARGGS%" =="_EXTERN" echo Gamita ang quick_runserver.bat
+
 if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" %_OLD_CODEPAGE% > nul
     set _OLD_CODEPAGE=
