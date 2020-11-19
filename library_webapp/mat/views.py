@@ -1,3 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
+from django.views.generic import View,TemplateView
+from django.http import HttpResponse
 
 # Create your views here.
+
+class MatView(View):
+    def get(self,request):
+        return render(request,'mat.html')
