@@ -1,0 +1,52 @@
+body.map {
+    background-color: darkred;
+    margin: 0;
+    padding: 0;
+}
+
+.map_container{
+    /* overflow:auto; */
+    display: flex;
+    /* width: 1400px; */
+}
+
+
+.map-viewport_container {
+    /* float: left; */
+    /* display: inline-block; */
+    width: 80%;
+    height: 100vh;
+
+    padding: 0;
+    margin: 0;
+
+}
+
+.map-area-panel {
+    /* float: left; */
+    /* display: inline-block; */
+    width: calc(20% - 4%);
+    /* height: calc(100% - 4%); */ /* 2% CAME FROM THE PADDING-TOP AND PADDING-BOTTOM*/
+
+    padding: 2%;
+
+
+}
+
+.map-area-buttons{
+    padding: 2%;
+
+    display: flex; /* YOU CAN READ ABOUT FLEX HERE: https://css-tricks.com/snippets/css/a-guide-to-flexbox/*/
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* flex-flow: column wrap; */ /* SHORT-HAND FOR 'flex-direction' AND 'flex-wrap' */
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.map-button{
+    width: 80px;
+    height: 50px;
+    margin: 5%;
+}
+

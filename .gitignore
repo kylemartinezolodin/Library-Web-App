@@ -4,6 +4,8 @@ quick_runserver.bat
 #FROM: https://gist.github.com/santoshpurbey/6f982faf1eacdac153ffd86a3a694239
 
 # Byte-compiled / optimized / DLL files
+library_webapp/library_webapp/__pycache__/
+library_webapp/libraryMap/__pycache__/
 __pycache__
 
 .vscode
