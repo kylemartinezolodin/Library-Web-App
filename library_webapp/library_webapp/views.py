@@ -1,6 +1,5 @@
 from django.views import View
 from django.shortcuts import redirect, render
-from nltk.corpus import wordnet
 import re
 import json
 
