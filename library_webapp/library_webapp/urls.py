@@ -15,7 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from . import views
+
+from django.http import JsonResponse
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('alfred',  views.alfred.as_view(), name='alfred'),
+    path('ajax/alfred', views.alfredprocess, name='alfredprocess'),
 ]
