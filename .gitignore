@@ -2,13 +2,9 @@
 venv/
 quick_runserver.bat
 
-library_webapp/library_webapp/__pycache__/
-library_webapp/libraryMap/__pycache__/
-__pycache__
-
-
 # Byte-compiled / optimized / DLL files
 .vscode
+__pycache__
 
 .DS_Store
 *.sqlite3
