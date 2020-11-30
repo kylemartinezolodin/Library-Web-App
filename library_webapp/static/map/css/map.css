@@ -1,5 +1,9 @@
+
+    /* background-color: #8c383e;*/ /* red 1 */
+    /* background-color: #781b1b;*/ /* red 2 */
+    /* background-color: #610c0a; */ /* red 3 */
 body.map {
-    background-color: darkred;
+    background-color: #ffdf16;
     margin: 0;
     padding: 0;
 }
@@ -25,12 +29,16 @@ body.map {
 .map-area-panel {
     /* float: left; */
     /* display: inline-block; */
-    width: calc(20% - 4%);
+    /* width: calc(20% - 4%); */
+    width: 20%;
     /* height: calc(100% - 4%); */ /* 2% CAME FROM THE PADDING-TOP AND PADDING-BOTTOM*/
 
-    padding: 2%;
+    /* padding: 2%; */
+}
 
-
+#description_container {
+    padding: 5%;
+    background-color: #781b1b;
 }
 
 .map-area-buttons{
@@ -48,5 +56,8 @@ body.map {
     width: 80px;
     height: 50px;
     margin: 5%;
+
+    border: 0 transparent none;
+    background-color: #ffffff;
 }
 

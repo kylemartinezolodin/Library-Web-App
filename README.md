@@ -1,4 +1,4 @@
-#0
+#1
 # Library-Web-App [OLODIN]
 An Applications Developement repository
 
@@ -15,4 +15,9 @@ Rules:
 	-Only increment <strong>z</strong> when there are minor changes (added elements, deleted, edited) relative to the <strong>y</strong> version
 <strong>Version History:</strong>
 	v0.1	- Initialize virtual environment & fresh django 
+	v0.1.1	- Changed repository directory structure
+	v0.2.0	- Added three.js library in repo
+	v0.3.0  - redevelop map.html' css and revised 3D model of library
+	 
+
 </pre>
