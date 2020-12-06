@@ -39,7 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'administrator',
     'material',
+    'booth',
+    'comstudreserve',
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
