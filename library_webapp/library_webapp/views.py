@@ -48,8 +48,10 @@ def alfredprocess(request):
         key = matched_intent
         if key == 'search':
             query = (re.findall(r'"([^"]*)"', msgText))[0].lower()
-            one = Material.objects.get(Material_title=query)
-            responses[key] = one.Material_title
+            queries = Material.objects.filter(Material_title__icontains=query)
+            for ob in queries:
+                responses[key] += "[" + ob.Material_title + "]<br/>"
+            
 
     r = responses[key]
 
