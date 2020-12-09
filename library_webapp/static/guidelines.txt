@@ -1,0 +1,5 @@
+if files will only be used in 1 page (i.e. index.html) create a folder named after that html file without ".html" (i.e. /index)
+
+if it will be used more than once place it under commons folder
+
+ayaw lang guro ni ninyo sunda
