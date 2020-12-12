@@ -38,8 +38,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'administrator',
-    'material'
+    'material',
+    'booth',
+    'comstudreserve',
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

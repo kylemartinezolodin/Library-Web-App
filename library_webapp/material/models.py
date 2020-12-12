@@ -2,13 +2,13 @@ from django.db import models
 from datetime import datetime
 
 class Material(models.Model):
-	type = models.CharField(max_length = 100)
-	title = models.CharField(max_length = 100)
-	author = models.IntegerField()
-	publication = models.DateField()
-	shelf_rack = models.CharField(max_length = 10)
-	image = models.ImageField()
-	preface = models.CharField(max_length = 300)
+	Material_type = models.CharField(max_length = 100)
+	Material_title = models.CharField(max_length = 100)
+	Material_author = models.IntegerField()
+	Material_publication = models.DateField()
+	Material_shelf_rack = models.CharField(max_length = 10)
+	Material_image = models.ImageField()
+	Material_preface = models.CharField(max_length = 300)
 
 	class Meta:
 		db_table = "Material"
