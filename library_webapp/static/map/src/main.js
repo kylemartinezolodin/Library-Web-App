@@ -1,8 +1,6 @@
 import * as THREE from '../vendor/three.js/build/three.module.js';
 
 import { OrbitControls } from '../vendor/three.js/examples/jsm/controls/OrbitControls.js';
-// import { OrbitControls } from '../../';
-import { FlyControls } from '../vendor/three.js/examples/jsm/controls/FlyControls.js';
 import { GLTFLoader } from '../vendor/three.js/examples/jsm/loaders/GLTFLoader.js';
 import { RGBELoader } from '../vendor/three.js/examples/jsm/loaders/RGBELoader.js';
 import { RoughnessMipmapper } from '../vendor/three.js/examples/jsm/utils/RoughnessMipmapper.js';
@@ -61,7 +59,7 @@ function init() {
             const roughnessMipmapper = new RoughnessMipmapper( renderer );
 
             const loader = new GLTFLoader().setPath( '../../static/map/assets/models/gltf/library/' ); // IT'S RELATIVE TO THE INDEX.HTML LOCATION
-            loader.load( 'library 0.1.glb', function ( gltf ) {
+            loader.load( 'library 0.2.glb', function ( gltf ) {
 
                 gltf.scene.traverse( function ( child ) {
 
@@ -134,7 +132,7 @@ function init() {
     });
 
     button3.addEventListener( 'click', function() {
-        moveCamera( -8.9098, 3.1988, -6.6144);
+        moveCamera( -5.7231, 2.5252, -8.6223);
         moveControl(-2.5674, 0.6147, 0.6722);
         document.querySelector("#description_container").innerHTML = document.querySelector("#area-3_description").innerHTML
     });
@@ -185,4 +183,3 @@ function moveControl(x, y, z) {
     render();
     controls.update();
 }
-console.log(gltfRef.scene);
