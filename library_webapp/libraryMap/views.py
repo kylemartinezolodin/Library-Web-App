@@ -10,4 +10,4 @@ class MapIndexView(View):
         
 class TestIndexView(View):
     def get(self, request):
-        return render(request, 'mapTemplates/index.html')
+        return render(request, 'mapTemplates/test.html')

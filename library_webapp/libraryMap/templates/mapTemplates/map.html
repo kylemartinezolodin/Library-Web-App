@@ -4,8 +4,10 @@
 		<title>Library Map</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-		<link rel="stylesheet" href="../../static/map/css/map.css">
-		<link type="text/css" rel="stylesheet" href="../../static/map/css/main.css">
+
+		{% load static %} <!-- DJANGO CONVENTION -->
+		<link rel="stylesheet" href="{% static 'map/css/map.css' %}">
+		<link type="text/css" rel="stylesheet" href="{% static 'map/css/main.css'%}">
 	</head>
 
 	<body class="map">
@@ -57,6 +59,6 @@
 		
 
 	</body>
-	<script type="module" src="../../static/map/src/main.js"></script>
-	<script src="../../static/commons/js/waw.js"></script>
+	<script type="text/javascript" src="{% static 'map/js/map.js'%}"></script>
+	<!-- <script src="../../static/commons/js/waw.js"></script> -->
 </html>
