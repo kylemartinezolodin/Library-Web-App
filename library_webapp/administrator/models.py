@@ -10,12 +10,16 @@ class Administrator(models.Model):
 	class Meta:
 		db_table = "Administrator"
 
+	def values(self):
+		return self.Administrator_username
+
+
 class Announcement(models.Model):
 	Announcement_type = models.CharField(max_length = 100)
 	Announcement_title = models.CharField(max_length = 100)
 	Announcement_content = models.CharField(max_length = 100)
 	Announcement_date = models.DateField()
-	Announcement_author = models.IntegerField()
+	Announcement_author = models.ForeignKey(Administrator, on_delete=models.CASCADE)
 
 	class Meta:
 		db_table = "Announcement"
