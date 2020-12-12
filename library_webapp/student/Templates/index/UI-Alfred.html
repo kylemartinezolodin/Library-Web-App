@@ -68,12 +68,17 @@
         }
 /* Start pf Search Icon Transition*/
         :root {
-	         --line-thickness: 0.25em;
-	         --glass-size: 65%;
-	         --icon-height: 2.5rem;
-	         --transition-speed: 0.35s;
-	         --timing-function: cubic-bezier(0.66, 1.51, 0.77, 1.13);
-	         --icon-color: white;
+          --line-thickness: 0.25em;
+          --glass-size: 65%;
+          --icon-height: 2.5rem;
+          --transition-speed: 0.35s;
+          --timing-function: cubic-bezier(0.66, 1.51, 0.77, 1.13);
+          --icon-color: white;
+          --body-bg:#d9d9d9;
+          --msger-bg: #fff;
+          --border: 2px solid #ddd;
+          --left-msg-bg: #ececec;
+          --right-msg-bg: #8a3218;
         }
 
 
@@ -695,65 +700,65 @@
     const PERSON_NAME = "Not Sean";
 
     msgerForm.addEventListener("submit", event => {
-    event.preventDefault();
+      event.preventDefault();
 
-    const msgText = msgerInput.value;
-    if (!msgText) return;
+      const msgText = msgerInput.value;
+      if (!msgText) return;
 
-    appendMessage(PERSON_NAME, PERSON_IMG, "right", msgText);
-    msgerInput.value = "";
+      appendMessage(PERSON_NAME, PERSON_IMG, "right", msgText);
+      msgerInput.value = "";
 
-    $.ajax({
-        url: '/ajax/alfred',
-        data: {
-            'msgText': msgText
-        },
-        type: 'GET',
-        dataType: 'json',
-        success: function(data){
-            // JSON DATATYPE
-            //  X = {key:value,key:value} so on..
-            //
-            var d = data['r'];
-            const delay = msgText.split(" ").length * 200;
+      $.ajax({
+          url: 'student/ajax/alfred',
+          data: {
+              'msgText': msgText
+          },
+          type: 'GET',
+          dataType: 'json',
+          success: function(data){
+              // JSON DATATYPE
+              //  X = {key:value,key:value} so on..
+              //
+              var d = data['r'];
+              const delay = msgText.split(" ").length * 200;
 
-            setTimeout(() => {
-                appendMessage(BOT_NAME, BOT_IMG, "left", d);
-            }, delay);
-        }
-        });
-    });
+              setTimeout(() => {
+                  appendMessage(BOT_NAME, BOT_IMG, "left", d);
+              }, delay);
+          }
+          });
+      });
 
-    function appendMessage(name, img, side, text) {
-    //   Simple solution for small apps
-    const msgHTML = `
-        <div class="msg ${side}-msg">
-        <div class="msg-img" style="background-image: url(${img})"></div>
+      function appendMessage(name, img, side, text) {
+      //   Simple solution for small apps
+      const msgHTML = `
+          <div class="msg ${side}-msg">
+          <div class="msg-img" style="background-image: url(${img})"></div>
 
-        <div class="msg-bubble">
-            <div class="msg-text">${text}</div>
-        </div>
-        </div>
-    `;
+          <div class="msg-bubble">
+              <div class="msg-text">${text}</div>
+          </div>
+          </div>
+      `;
 
-    msgerChat.insertAdjacentHTML("beforeend", msgHTML);
-    msgerChat.scrollTop += 500;
-    }
-    // Utils
-    function get(selector, root = document) {
-    return root.querySelector(selector);
-    }
+      msgerChat.insertAdjacentHTML("beforeend", msgHTML);
+      msgerChat.scrollTop += 500;
+      }
+      // Utils
+      function get(selector, root = document) {
+      return root.querySelector(selector);
+      }
 
-    function formatDate(date) {
-    const h = "0" + date.getHours();
-    const m = "0" + date.getMinutes();
+      function formatDate(date) {
+      const h = "0" + date.getHours();
+      const m = "0" + date.getMinutes();
 
-    return `${h.slice(-2)}:${m.slice(-2)}`;
-    }
+      return `${h.slice(-2)}:${m.slice(-2)}`;
+      }
 
-    function random(min, max) {
-    return Math.floor(Math.random() * (max - min) + min);
-    }
+      function random(min, max) {
+      return Math.floor(Math.random() * (max - min) + min);
+      }
 
     </script>
   </body>

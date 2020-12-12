@@ -50,7 +50,8 @@ def alfredprocess(request):
         'time':'We\'re Open only open on Weekdays from 00:00 till 00:00',
         'fallback':'I dont quite understand. Could you repeat that?',
         'search': '',
-        'book': ''
+        'book': '',
+        'empty':'I cant find what youre looking for'
     }
 
     keywords_dict={}
@@ -79,7 +80,7 @@ def alfredprocess(request):
             for ob in queries:
                 responses[key] += "<b>[</b>" + ob.Material_title + "<b>]</b><br/>"
         else:
-            key = 'fallback'
+            key = 'empty'
 
 
     r = responses[key]
