@@ -48,19 +48,20 @@ def alfredprocess(request):
     key='fallback' 
     if matched_intent in responses:
         key = matched_intent
+        query = []
         if key == 'search':
             query = (re.findall(r'"([^"]*)"', msgText))[0].lower()
-            
+
         elif key == 'book':
             query = (re.findall(r'of\s*([^"]*)', msgText))[0].lower()
-        
+
         queries = Material.objects.filter(Material_title__icontains=query)
-        print(type(queries))
+
         if queries.count() > 0:
             for ob in queries:
                 responses[key] += "<b>[</b>" + ob.Material_title + "<b>]</b><br/>"
-        else:
-            key = 'fallback'
+        elif key == 'search' and key == 'book':
+            key = 'empty'
         
 
     r = responses[key]
