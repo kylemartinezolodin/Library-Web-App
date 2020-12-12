@@ -20,16 +20,18 @@ def alfredprocess(request):
         'apa': ['.*\\bapa\\b.*','.*\\bapa format\\b.*',],
         'mla': ['.*\\bmla\\b.*','.*\\bmla format\\b.*'],
         'time': ['.*\\btime\\b.*','.*\\bopen\\b.*','.*\\bclose\\b.*','.*\\bclosing\\b.*'],
-        'search':['^search\s".*"\s*']
+        'search': ['^search\s".*"\s*'],
+        'book': ['.*\\bbook of\\b.*','.*\\bbooks of\\b.*']
     }
 
     responses={
-    'greet':'Hello! How can I help you?',
-    'apa':'Surname, initial(s). (Date Published). Title of source. Location of publisher: publisher. Retrieved from URL',
-    'mla':'Author name(s). \"Article Time\". Title of container, contributors, version, numbers, date of publication, location, Title of database, DOI or URL',
-    'time':'We\'re Open only open on Weekdays from 00:00 till 00:00',
-    'fallback':'I dont quite understand. Could you repeat that?',
-    'search':''
+        'greet':'Hello! How can I help you?',
+        'apa':'Surname, initial(s). (Date Published). Title of source. Location of publisher: publisher. Retrieved from URL',
+        'mla':'Author name(s). \"Article Time\". Title of container, contributors, version, numbers, date of publication, location, Title of database, DOI or URL',
+        'time':'We\'re Open only open on Weekdays from 00:00 till 00:00',
+        'fallback':'I dont quite understand. Could you repeat that?',
+        'search': '',
+        'book': ''
     }
 
     keywords_dict={}
@@ -48,10 +50,18 @@ def alfredprocess(request):
         key = matched_intent
         if key == 'search':
             query = (re.findall(r'"([^"]*)"', msgText))[0].lower()
-            queries = Material.objects.filter(Material_title__icontains=query)
-            for ob in queries:
-                responses[key] += "[" + ob.Material_title + "]<br/>"
             
+        elif key == 'book':
+            query = (re.findall(r'of\s*([^"]*)', msgText))[0].lower()
+        
+        queries = Material.objects.filter(Material_title__icontains=query)
+        print(type(queries))
+        if queries.count() > 0:
+            for ob in queries:
+                responses[key] += "<b>[</b>" + ob.Material_title + "<b>]</b><br/>"
+        else:
+            key = 'fallback'
+        
 
     r = responses[key]
 
