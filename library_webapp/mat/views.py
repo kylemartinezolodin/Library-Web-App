@@ -14,7 +14,7 @@ def LiveSearch(request):
     mat = Material.objects.filter(title__icontains=filt)
     print(filt)
     for objects in mat:
-        d += "<div class='result' id='outer' style='align-content:center;  padding: 15px 30px 15px 30px; margin: auto;'><div class='row' id='inner' style='border-radius: 4px; padding: 15px 10px 15px 5px;'><div class='col-2'><img src='{% static `res/object.image` %}' alt='' srcset='' width='140px' height='170px'></div><div class='col'><h3 style='color: white;'>"+objects.title+"</h3> <!-- TTILE --><h6 style='color: white;'></h6> <!-- Author --><p style='color: white; text-align: justify;'>"+objects.preface+"</p> <!-- preface --></div></div></div>"
+        d += "<div class='result' id='outer' style='align-content:center;  padding: 15px 30px 15px 30px; margin: auto;'><div class='row' id='inner' style='border-radius: 4px; padding: 15px 10px 15px 5px;'><div class='col-2'><img src='{% static `res/"+object.image+"` %}' alt='' srcset='' width='140px' height='170px'></div><div class='col'><h3 style='color: white;'>"+objects.title+"</h3> <!-- TTILE --><h6 style='color: white;'></h6> <!-- Author --><p style='color: white; text-align: justify;'>"+objects.preface+"</p> <!-- preface --></div></div></div>"
     print(d)
     return JsonResponse({"d": d})
     #def get(self, request):
