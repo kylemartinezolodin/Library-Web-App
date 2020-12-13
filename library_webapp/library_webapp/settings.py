@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'library_webapp.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'sample',
+        'NAME': 'lib_webapp',
         'USER': 'root',
         'PASSWORD': '',
         'HOST': '127.0.0.1',
