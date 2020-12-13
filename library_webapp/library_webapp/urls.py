@@ -42,5 +42,5 @@ urlpatterns += [
 
 # MATERIAL urlpatterns
 urlpatterns += [
-    path('',include('mat.urls')),
+    path('materials/',include('mat.urls')),
 ]
