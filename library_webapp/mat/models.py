@@ -7,7 +7,7 @@ class Material(models.Model):
 	author = models.IntegerField()
 	publication = models.DateField()
 	shelf_rack = models.CharField(max_length = 10)
-	image = models.ImageField()
+	image = models.CharField(max_length = 50)
 	preface = models.CharField(max_length = 300)
 
 	class Meta:
