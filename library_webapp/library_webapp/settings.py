@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-<<<<<<< HEAD
+    'library_webapp',
     'administrator',
     'material',
     'booth',
@@ -46,9 +46,6 @@ INSTALLED_APPS = [
     'student',
     'frame',
     'library_webapp',
-=======
-    'libraryMap'
->>>>>>> map_feature
 ]
 
 
@@ -136,18 +133,13 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-<<<<<<< HEAD
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-=======
+
 #STATICFILES_DIRS = [
 #    BASE_DIR / "static/",
 #]
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static")
-]
->>>>>>> map_feature

@@ -18,6 +18,12 @@ from django.urls import path
 from django.views.generic import TemplateView
 from django.urls import path, include
 
+# ALFRED IMPPORT BLOCK
+from . import views
+
+from django.http import JsonResponse
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('student/',include('student.urls', namespace='student')),
@@ -25,4 +31,10 @@ urlpatterns = [
     path('frame/',include('frame.urls', namespace='iframe')),
     path('admin/', admin.site.urls),
     path('map/', include('libraryMap.urls', namespace='libraryMap')),
+
+# ALFRED urlpatterns
+urlpatterns += [
+    path('admin/', admin.site.urls),
+    path('alfred',  views.alfred.as_view(), name='alfred'),
+    path('ajax/alfred', views.alfredprocess, name='alfredprocess'),
 ]
