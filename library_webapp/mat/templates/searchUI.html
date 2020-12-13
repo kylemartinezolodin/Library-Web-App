@@ -28,7 +28,7 @@
         //var str = document.getElementById("materialInput").value;
         //console.log(str);
         $(document).ready(function(){
-            $("input").change(function(){
+            $("input").keypress(function(){
                 setTimeout(function(){ $.ajax({                
                 url: "get/ajax/friend",
                 data: {"d": $("#materialInput").val()},
