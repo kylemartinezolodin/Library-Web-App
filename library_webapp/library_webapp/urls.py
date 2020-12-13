@@ -27,24 +27,20 @@ urlpatterns = [
     path('student/',include('student.urls', namespace='student')),
     #path('',include('student.urls')),
     path('frame/',include('frame.urls', namespace='iframe')),
-    path('admin/', admin.site.urls),
-    path('map/', include('libraryMap.urls', namespace='libraryMap')),
 ]
 
 # MAP urlpatterns
 urlpatterns += [
-    path('admin/', admin.site.urls),
     path('map/', include('libraryMap.urls', namespace='libraryMap')),
 ]
 
 # ALFRED urlpatterns
 urlpatterns += [
-    path('admin/', admin.site.urls),
     path('alfred',  views.alfred.as_view(), name='alfred'),
     path('ajax/alfred', views.alfredprocess, name='alfredprocess'),
+]
 
 # MATERIAL urlpatterns
 urlpatterns += [
-    path('admin/', admin.site.urls),
     path('',include('mat.urls')),
 ]

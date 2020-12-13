@@ -3,6 +3,10 @@ venv/
 quick_runserver.bat
 node_modules
 
+# GENERAL IGNORED FILES/DIR
+migrations
+
+# FROM: https://gist.github.com/santoshpurbey/6f982faf1eacdac153ffd86a3a694239
 # Byte-compiled / optimized / DLL files
 .vscode
 __pycache__
@@ -12,4 +16,3 @@ __pycache__
 *.pyc
 *.db
 *.pid
-# FROM: https://gist.github.com/santoshpurbey/6f982faf1eacdac153ffd86a3a694239

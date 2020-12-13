@@ -4,7 +4,7 @@ from django.shortcuts import render, redirect
 from django.views.generic import View
 from django.http import HttpResponse
 from django.shortcuts import render
-from mat.models import Material
+from material.models import Material
 from datetime import datetime
 
 def LiveSearch(request):

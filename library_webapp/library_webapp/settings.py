@@ -45,8 +45,8 @@ INSTALLED_APPS = [
     'comstudreserve',
     'student',
     'frame',
-    'library_webapp',
     'mat',
+    'libraryMap',
 ]
 
 
