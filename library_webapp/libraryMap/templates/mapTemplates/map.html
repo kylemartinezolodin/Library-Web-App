@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Library Map</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+		{% load static %} <!-- DJANGO CONVENTION -->
+		<link rel="stylesheet" href="{% static 'map/css/map.css' %}">
+		<link type="text/css" rel="stylesheet" href="{% static 'map/css/main.css'%}">
+	</head>
+
+	<body class="map">
+		<!-- <div id="info">
+			<a href="https://threejs.org" target="_blank" rel="noopener">three.js</a> - GLTFLoader<br />
+			Battle Damaged Sci-fi Helmet by
+			<a href="https://sketchfab.com/theblueturtle_" target="_blank" rel="noopener">theblueturtle_</a><br />
+			<a href="https://hdrihaven.com/hdri/?h=royal_esplanade" target="_blank" rel="noopener">Royal Esplanade</a> by <a href="https://hdrihaven.com/" target="_blank" rel="noopener">HDRI Haven</a>
+		</div> -->
+		<div id="map_container" class="map_container">
+			<div id="map-viewport_container" class="map-viewport_container">
+
+			</div>
+
+			<div class="map-area-panel">
+				<div id="description_container" class="map-area-info">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+					Vero animi voluptatem suscipit laborum temporibus, laboriosam modi consequatur quae ipsam dolor accusantium, 
+					error facere quo maiores iste similique necessitatibus voluptates sunt.
+				</div>
+				<div class="map-area-buttons">
+					<button id="but1" class="map-button">Area 1</button>
+					<button id="but2" class="map-button">Area 2</button>
+					<button id="but3" class="map-button">Area 3</button>
+				</div>
+				
+				<input style="display: none;" type="text" name="" id="Cx" value="Cx: ">
+				<input style="display: none;" type="text" name="" id="Cy" value="Cy: ">
+				<input style="display: none;" type="text" name="" id="Cz" value="Cz: ">
+				
+				<input style="display: none;" type="text" name="" id="Tx" value="Tx: ">
+				<input style="display: none;" type="text" name="" id="Ty" value="Ty: ">
+				<input style="display: none;" type="text" name="" id="Tz" value="Tz: ">
+
+				<div id="area-1_description" style="display: none;">
+					<h2>Area 1</h2><br>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores a aperiam iusto. Tempora, mollitia. <br>
+					Lorem ipsum dolor sit?
+				</div>
+				<div id="area-2_description" style="display: none;">
+					<h2>Area 2</h2><br>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam doloribus ab facere sunt a doloremque repudiandae eveniet unde dolorem, laborum maiores enim?
+				</div>
+				<div id="area-3_description" style="display: none;">
+					<h2>Area 3</h2><br>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro harum doloremque tempora dolore reiciendis numquam id perspiciatis nemo. <br>
+					Lorem ipsum dolor sit amet consectetur.
+				</div>
+			</div>
+		</div>	
+		
+
+	</body>
+	<script type="text/javascript" src="{% static 'map/js/map.js'%}"></script>
+	<!-- <script src="../../static/commons/js/waw.js"></script> -->
+</html>

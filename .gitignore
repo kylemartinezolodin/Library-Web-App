@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 venv/
 quick_runserver.bat
 
@@ -7,9 +8,24 @@ quick_runserver.bat
 __pycache__
 
 .vscode
+=======
+# OLODIN CUSTOM .gitignore specs
+venv/
+quick_runserver.bat
+node_modules
+
+# Byte-compiled / optimized / DLL files
+.vscode
+__pycache__
+>>>>>>> map_feature
 
 .DS_Store
 *.sqlite3
 *.pyc
 *.db
+<<<<<<< HEAD
 *.pid
+=======
+*.pid
+# FROM: https://gist.github.com/santoshpurbey/6f982faf1eacdac153ffd86a3a694239
+>>>>>>> map_feature

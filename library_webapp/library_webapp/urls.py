@@ -22,5 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('student/',include('student.urls', namespace='student')),
     #path('',include('student.urls')),
-    path('frame/',include('frame.urls', namespace='iframe'))
+    path('frame/',include('frame.urls', namespace='iframe')),
+    path('admin/', admin.site.urls),
+    path('map/', include('libraryMap.urls', namespace='libraryMap')),
 ]
