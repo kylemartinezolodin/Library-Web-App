@@ -44,3 +44,8 @@ urlpatterns += [
 urlpatterns += [
     path('materials/',include('mat.urls')),
 ]
+
+# Admin_login urlpatterns
+urlpatterns += [
+    path('admin_login/',include('admin_login.urls')),
+]
