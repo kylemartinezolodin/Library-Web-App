@@ -18,23 +18,23 @@ def LiveSearch(request):
     print(d)
     return JsonResponse({"d": d})
     #def get(self, request):
-     #   if 'term' in request.GET:        
+     #   if 'term' in request.GET:
       #      qs = Material.objects.filter(title__icontains=request.GET.get('term'))
        #     titles = list()
         #    for material in qs:
          #       print(material)
           #      titles.append(material.title)
            # return JsonResponse(titles, safe=False)
-            
+
         #return render(request, 'search.html')
 
 class SearchView(View):
     def get(self, request):
-        return render(request, 'search.html')
+        return render(request, 'mat/search.html')
 
 class MatView(View):
     def get(self,request):
-        return render(request,'mat.html')
+        return render(request,'mat/mat.html')
 
 class Mat1View(View):
     def get(self,request):
@@ -53,9 +53,9 @@ class Mat1View(View):
         #         'author' : q3
         #     }
         # return render(request,'mat1.html',context0)
-        return render(request,'mat1.html')
+        return render(request,'mat/mat1.html')
 # Create your views here.
 
 class SearchUIView(View):
     def get(self,request):
-        return render(request,'searchUI.html')
+        return render(request,'mat/searchUI.html')
