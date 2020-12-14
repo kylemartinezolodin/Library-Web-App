@@ -70,9 +70,8 @@
                 <input type="text" id="materialInput" style="height: 55px;  width: 100%; background-color: #8a3218; color: #fff;" name="materialInput;" placeholder="Search Books">
             </form>
             </div>
-            <!-- sugod dire for FOR -->
-            <div id="table_body">
-
+            <div id="table_body" style="margin-bottom: 25px;">
+                
             </div>
             <div class="nbooks" style="display: block; margin: 0px 0px 30px 0px;">
                 <div style="align-content:center; background-color:#e4c60c; padding: 0px 40px 30px 40px;">
@@ -99,57 +98,33 @@
                         <u style="color: white;"><b><h3 style="color: white; padding: 20px 0px 10px 50px ;">MOST BORROWED BOOKS OF THE MONTH</h3></b></u>
                     </div>
                     <div class="row">
+                        {% for items in trends %}
+                        {% if forloop.first %}
                         <div class="col-3">
-                            <img src="/static/res/" alt="" srcset="" width="140px" height="180px"style="margin: 10px 10px 10px 60px;">
+                            <img src="/static/res/{{trends.Borrow_material_id.Material_image}}" alt="" srcset="" width="140px" height="180px"style="margin: 10px 10px 10px 60px;">
                         </div>
+                        {% endif %}
                         <div class="col" style="color: white; ">
+                            
                             <div class="row" style="background-color: #8a3218; width: 100%; margin-bottom: 10px;">
                                 <div class="col-1">
-                                    <h1>#1</h1>
+                                    <h3>#{{forloop.counter}}</h3>
                                 </div>
                                 <div class="col-8">
-                                    <h5>First Book</h5>
+                                    <h5>{{items.Borrow_material.Material_title}}</h5>
                                 </div>
                                 <div class="col">
                                     <i>
-                                    BORROWED 2 TIMES <br>
+                                    BORROWED {{items.Borrow_counter}}  TIMES <br>
                                     <span style="height: 10px; width: 10px; background-color: #00ff00; border-radius: 50%; display: inline-block;"></span>
-                                    AVAILABLE                                    
-                                    </i>
-                                </div>
-                            </div>                            
-                            <div class="row" style="background-color: #8a3218; width: 100%; margin-bottom: 10px;">
-                                <div class="col-1">
-                                    <h3>#2</h3>
-                                </div>
-                                <div class="col-8">
-                                    <h5>Second Book</h5>
-                                </div>
-                                <div class="col">
-                                    <i>
-                                    BORROWED 1 TIMES <br>
-                                    <!-- <span style="height: 10px; width: 10px; background-color: #cc6600; border-radius: 50%; display: inline-block;"></span>
-                                    UNAVAILABLE -->
-                                    <span style="height: 10px; width: 10px; background-color: #00ff00; border-radius: 50%; display: inline-block;"></span>
-                                    AVAILABLE    
-                                    </i>
-                                </div>
-                            </div>
-                            <div class="row" style="background-color: #8a3218; width: 100%; margin-bottom: 10px;">
-                                <div class="col-1">
-                                    <h3>#3</h3>
-                                </div>
-                                <div class="col-8">
-                                    <h5>DISCRETE MATHEMATICS AND ITS APPLICATIONS</h5>
-                                </div>
-                                <div class="col">
-                                   <i>
-                                    BORROWED 3 TIMES <br>
                                     <span style="height: 10px; width: 10px; background-color: #cc6600; border-radius: 50%; display: inline-block;"></span>
-                                    UNAVAILABLE
-                                   </i>
+                                    <span style="height: 10px; width: 10px; background-color: #00ff00; border-radius: 50%; display: inline-block;"></span>
+                                    <span style="height: 10px; width: 10px; background-color: #cc6600; border-radius: 50%; display: inline-block;"></span>
+                                    <!-- AVAILABLE                                     -->
+                                    </i>
                                 </div>
                             </div>
+                            {% endfor %}                            
                         </div>
                     </div>
                 </div>    

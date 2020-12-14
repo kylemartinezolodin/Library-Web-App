@@ -17,7 +17,7 @@ class Material(models.Model):
 	Material_author = models.ForeignKey(Author, blank=True,on_delete=models.CASCADE)
 	Material_publication = models.DateField()
 	Material_shelf_rack = models.CharField(max_length = 10)
-	Material_image = models.ImageField(blank=True)
+	Material_image = models.CharField(max_length=30,blank=True)
 	Material_preface = models.CharField(max_length = 300)
 
 	class Meta:
