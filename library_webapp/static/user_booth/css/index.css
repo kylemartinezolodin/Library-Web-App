@@ -1,0 +1,96 @@
+@font-face {
+    font-family: OpenSans-Regular;
+    src: url('../../commons/fonts/Open_Sans/OpenSans-Regular.ttf'); 
+}
+
+@font-face {
+    font-family: OpenSans-Bold;
+    src: url('../../commons/fonts/Open_Sans/OpenSans-Bold.ttf'); 
+}
+
+@font-face {
+    font-family: OpenSans-ExtraBold;
+    src: url('../../commons/fonts/Open_Sans/OpenSans-ExtraBold.ttf'); 
+}
+
+body {
+    background-color: #ffdf16;
+    color: white;
+
+    font-family: OpenSans-Regular;
+}
+
+.interface_container {
+    margin: 2vw 3vw;
+    padding: 2vw;
+    background-color: #e4c60c;
+}
+
+.interface {
+    padding: 1vw;
+    background-color: #a63c1d;
+
+    display: flex;
+}
+
+.interface-division_container {
+    margin: 0.9vw;
+    width: 50%;
+    height: 15vw;
+
+    background-color: #8a3218;
+}
+
+.booth_available, .computer_available {
+    font-family: OpenSans-ExtraBold;
+    font-size: 1.25vw;
+}
+
+.booth_available_number, .computer_available_number {
+    font-size: 9.5vw;
+}
+
+.ribbon{
+    display: inline;
+    padding: 0.25vw;
+    background-color: #ffdf16;
+
+    color: #a63c1d;
+}
+
+.status-display_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    padding: 1.5vw 0;
+}
+
+
+.reserve_button {
+    display: block;
+    width: 24vw;
+    padding: 5%;
+    margin: 1vw auto;
+
+    color: white;
+    font-family: OpenSans-ExtraBold;
+    font-size: 1.25vw;
+
+
+    background-color: transparent;
+    border: 0.25vw solid #ffdf16;
+    opacity: 50%;
+}
+
+
+.computer_available, .booth_available {
+    text-align: center;
+}
+
+.trends_display {
+    display: block;
+    height: 85%;
+    margin: 0 auto;
+    margin-top: 1%;
+}

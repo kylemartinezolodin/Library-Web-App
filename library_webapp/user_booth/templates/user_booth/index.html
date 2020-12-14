@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booth</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'user_booth/css/index.css' %}">
+</head>
+    <body>
+        <div class="user_booth_container">
+
+            <div class="interface_container">
+                <div class="interface">
+                    <div class="interface-division_container booth_available">
+                        <div class="booth_available_number">
+                            <!-- PRINT NUMBER OF AVAILABLE BOOTHS DIRI -->
+                            {{booth_count}}
+                        </div>
+                        AVAILABLE BOOTHS
+                    </div>
+
+                    <div class="interface-division_container booth_display">
+                        <div class="ribbon">
+                            BOOTHS:
+                        </div>
+                        <div class="status-display_container">
+                            {% for booth in booth_list %}
+                                {% if breserve_list|length > 0 %}
+                                    {% for booth_reserve in breserve_list %}
+                                        {% if booth_reserve.BReserve_booth.id == booth.id %}
+                                            <img class="computer-status_display" src="{% static 'user_booth/asset/img/status-display/booth_unavail.png' %}" alt="">
+                                        {% else %}
+                                            <img class="computer-status_display" src="{% static 'user_booth/asset/img/status-display/booth_avail.png' %}" alt="">
+                                        {% endif %}
+                                    {% endfor %}
+                                {% else %}
+                                    <img class="computer-status_display" src="{% static 'user_booth/asset/img/status-display/booth_avail.png' %}" alt="">
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                        <button class="reserve_button" disabled><strike>RESERVE A BOOTH</strike></button>
+                    </div>
+
+                    
+                    <div class="interface-division_container computer-booth_display">
+                        <div class="ribbon">
+                            MONTHLY TRENDS: 
+                        </div>
+                        <img class="trends_display" src="{% static 'user_booth/asset/img/trends/booth.png' %}" alt="">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="interface_container">
+                <div class="interface">
+                    <div class="interface-division_container computer_available">
+                        <div class="computer_available_number">
+                            <!-- PRINT NUMBER OF AVAILABLE COMPUTERS DIRI -->
+                            {{computer_count}}
+                        </div>
+                        AVAILABLE COMPUTERS
+                    </div>
+
+                    <div class="interface-division_container computer_display">
+                        <div class="ribbon">
+                            COMPUTERS:
+                        </div>
+                        <div class="status-display_container">
+                            {% for computer in computer_list %}
+                                {% if creserve_list|length > 0 %}
+                                    {% for computer_reserve in creserve_list %}
+                                        {% if computer_reserve.CReserve_computer.id == computer.id %}
+                                            <img class="booth-status_display" src="{% static 'user_booth/asset/img/status-display/computer_unavail.png' %}" alt="">
+                                        {% else %}
+                                            <img class="booth-status_display" src="{% static 'user_booth/asset/img/status-display/computer_avail.png' %}" alt="">
+                                        {% endif %}
+                                        
+                                        <br>
+                                    {% endfor %}
+                                {% else %}
+                                    
+                                    <img class="booth-status_display" src="{% static 'user_booth/asset/img/status-display/computer_avail.png' %}" alt="">
+                                {% endif %}
+                            {% endfor %}
+
+                        </div>
+                        <button class="reserve_button" disabled><strike>RESERVE A COMPUTER</strike></button>
+                    </div>
+                    
+                    <div class="interface-division_container computer-chart_display">
+                        <div class="ribbon">
+                            MONTHLY TRENDS: 
+                        </div>
+                        <img class="trends_display" src="{% static 'user_booth/asset/img/trends/booth.png' %}" alt="">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </body>
+</html>

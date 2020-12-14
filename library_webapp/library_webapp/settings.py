@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'frame',
     'mat',
     'libraryMap',
+    'user_booth',
 ]
 
 
