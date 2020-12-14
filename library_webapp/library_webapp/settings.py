@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'mat',
     'libraryMap',
     'admin_login',
+    'user_booth',
 ]
 
 

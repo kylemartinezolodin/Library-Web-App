@@ -49,3 +49,8 @@ urlpatterns += [
 urlpatterns += [
     path('admin_login/',include('admin_login.urls')),
 ]
+
+# USER_BOOTH urlpatterns
+urlpatterns += [
+    path('booth/', include('user_booth.urls')),
+]
