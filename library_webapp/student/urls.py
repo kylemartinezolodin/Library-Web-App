@@ -18,5 +18,6 @@ urlpatterns = [
     path('map/map/',views.MapIndexView.as_view(),name="map"),
     path('alfred/alfred/',views.alfred.as_view(),name="alfred"),
     path('book/book/',views.SearchUIView.as_view(),name="book"),
+    path('booth/booth/',views.UserBoothIndexView.as_view(),name="booth")
 
 ]

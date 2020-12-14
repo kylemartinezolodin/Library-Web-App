@@ -7,7 +7,8 @@ from datetime import datetime, timedelta
 from django.contrib.auth import authenticate, login
 from django.http import HttpResponse
 from django.http import JsonResponse
-from material.models import *
+# from material.models import *
+# from library_webapp.user_booth import views
 # Create your views here.
 
 class StudentIndexView(View):
@@ -35,6 +36,10 @@ class BoothView(View):
 class MapIndexView(View):
     def get(self, request):
         return render(request, 'mapTemplates/map.html')
+
+class UserBoothIndexView(View):
+    def get(self, request):
+        return redirect('../../../booth/') # A BREAKTHROUGH!!! THIS WILL CHANGE YOUR URL ACORDING TO THE URL PATH PASSED
 
 class alfred(View):
     def get(self, request):

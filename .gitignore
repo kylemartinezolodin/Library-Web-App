@@ -5,7 +5,11 @@ quick_runserver.bat
 node_modules
 
 # GENERAL IGNORED FILES/DIR
-migrations
+library_webapp/administrator/migrations/
+library_webapp/booth/migrations/
+library_webapp/comstudreserve/migrations/
+library_webapp/material/migrations/
+library_webapp/administrator/migrations/
 
 # FROM: https://gist.github.com/santoshpurbey/6f982faf1eacdac153ffd86a3a694239
 # Byte-compiled / optimized / DLL files
