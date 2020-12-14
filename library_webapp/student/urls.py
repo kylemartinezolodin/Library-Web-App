@@ -12,6 +12,7 @@ urlpatterns = [
     path('alfred/', views.AlfredView.as_view(),name="AlfredView"),
     path('book/', views.BookView.as_view(),name="BookView"),
     path('booth/', views.BoothView.as_view(),name="BoothView"),
+    path('book/book/get/ajax/friend', views.LiveSearch, name = "LiveSearch"),
 
 #Merged
     path('map/map/',views.MapIndexView.as_view(),name="map"),
