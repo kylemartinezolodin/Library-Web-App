@@ -42,3 +42,13 @@ class alfred(View):
 class SearchUIView(View):
     def get(self,request):
         return render(request,'mat/searchUI.html')
+
+def LiveSearch(request):
+    filt = request.GET.getlist("d")[0]
+    d=""
+    mat = Material.objects.filter(Material_title__icontains=filt)
+    #print(mat[0])
+    for objects in mat:
+        d += "<div class='result' id='outer' style='align-content:center;  padding: 15px 30px 15px 30px; margin: auto;'><div class='row' id='inner' style='border-radius: 4px; padding: 15px 10px 15px 5px;'><div class='col-2'><img src='static/res/"+"' alt='' srcset='' width='140px' height='170px'></div><div class='col'><h3 style='color: white;'>"+objects.Material_title+"</h3> <!-- TTILE --><h6 style='color: white;'></h6> <!-- Author --><p style='color: white; text-align: justify;'>"+objects.Material_preface+"</p> <!-- preface --></div></div></div>"
+    #print(d)
+    return JsonResponse({"d": d})
