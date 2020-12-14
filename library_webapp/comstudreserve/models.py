@@ -8,6 +8,9 @@ class Student(models.Model):
 	class Meta:
 		db_table = "Student"
 
+	def __str__(self):
+		return self.Student_lastname
+
 class Computer(models.Model):
 	Computer_number = models.CharField(max_length = 10)
 
