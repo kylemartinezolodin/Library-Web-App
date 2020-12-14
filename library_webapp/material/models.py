@@ -14,10 +14,10 @@ class Author(models.Model):
 class Material(models.Model):
 	Material_type = models.CharField(max_length = 100)
 	Material_title = models.CharField(max_length = 100)
-	Material_author = models.ManyToManyField(Author, blank=True)
+	Material_author = models.ForeignKey(Author, blank=True,on_delete=models.CASCADE)
 	Material_publication = models.DateField()
 	Material_shelf_rack = models.CharField(max_length = 10)
-	Material_image = models.ImageField()
+	Material_image = models.ImageField(blank=True)
 	Material_preface = models.CharField(max_length = 300)
 
 	class Meta:

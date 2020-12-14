@@ -41,4 +41,30 @@ class alfred(View):
 
 class SearchUIView(View):
     def get(self,request):
-        return render(request,'mat/searchUI.html')
+        b = Material.objects.last()
+        print(b)
+        c = Material_Borrow.objects.all()
+        cx = list()
+        count = [3]
+        i = 0
+        for item in c:
+            cx.append(item)
+            print(item)
+            print(cx[i].Borrow_material)
+            i+=1
+            print(item.Borrow_material_id)
+            x=item.Borrow_material_id-1
+            # count[x]+=1
+
+        # count.sort(reverse=True)
+
+        # for item in cx:
+        #     if(count.index()==cx.Material_id):
+        #         final.append(cx)
+
+
+        context = {
+            'mat': b
+            # 'trends':final
+        }
+        return render(request,'mat/searchUI.html', context)

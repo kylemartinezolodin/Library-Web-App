@@ -74,6 +74,87 @@
             <div id="table_body">
 
             </div>
+            <div class="nbooks" style="display: block; margin: 0px 0px 30px 0px;">
+                <div style="align-content:center; background-color:#e4c60c; padding: 0px 40px 30px 40px;">
+                        <div class="row">
+                            <h5 style="color: white; background-color: #8a3218; margin: 0px 0px 5px -14px; padding: 1px 10px 1px 10px;">NEWLY ADDED BOOKS!</h5>
+                        </div>
+                        <div class="row" style="background-color: #a63c1d; border-radius: 4px;">
+                            <div class="col-3">
+                                <img src="/static/res/{{mat.Material_image}}" alt="" srcset="" width="200px" height="250px"style="margin: 10px 10px 10px 30px;">
+                            </div>
+                            <div class="col">
+                                <h3 style="width: 80%; color: white; margin: 30px 40px 10px 5px;">{{mat.Material_title}}</h3>
+                                <h6 style="color: white; margin-left: 30px;">{{mat.Material_author.lastname}}, {{mat.Material_author.firstname}}</h6>
+                                <p style="color: white; margin-left: 38px; margin-right: 38px; text-align: justify;">{{mat.Material_preface}}</p>
+                                <p style="text-align: right; color: white; margin-right: 20px;"></p>
+                            </div>
+                        </div>
+                </div>
+            </div>
+            <div style="display: block; margin: 30px 0px 0px 0px;">
+            <div class="trends" style="align-content:center; background-color: #e4c60c; padding: 30px 30px 30px 30px;">
+                <div style="background-color: #a63c1d;  border-radius: 4px;">
+                    <div class="row">
+                        <u style="color: white;"><b><h3 style="color: white; padding: 20px 0px 10px 50px ;">MOST BORROWED BOOKS OF THE MONTH</h3></b></u>
+                    </div>
+                    <div class="row">
+                        <div class="col-3">
+                            <img src="/static/res/" alt="" srcset="" width="140px" height="180px"style="margin: 10px 10px 10px 60px;">
+                        </div>
+                        <div class="col" style="color: white; ">
+                            <div class="row" style="background-color: #8a3218; width: 100%; margin-bottom: 10px;">
+                                <div class="col-1">
+                                    <h1>#1</h1>
+                                </div>
+                                <div class="col-8">
+                                    <h5>First Book</h5>
+                                </div>
+                                <div class="col">
+                                    <i>
+                                    BORROWED 2 TIMES <br>
+                                    <span style="height: 10px; width: 10px; background-color: #00ff00; border-radius: 50%; display: inline-block;"></span>
+                                    AVAILABLE                                    
+                                    </i>
+                                </div>
+                            </div>                            
+                            <div class="row" style="background-color: #8a3218; width: 100%; margin-bottom: 10px;">
+                                <div class="col-1">
+                                    <h3>#2</h3>
+                                </div>
+                                <div class="col-8">
+                                    <h5>Second Book</h5>
+                                </div>
+                                <div class="col">
+                                    <i>
+                                    BORROWED 1 TIMES <br>
+                                    <!-- <span style="height: 10px; width: 10px; background-color: #cc6600; border-radius: 50%; display: inline-block;"></span>
+                                    UNAVAILABLE -->
+                                    <span style="height: 10px; width: 10px; background-color: #00ff00; border-radius: 50%; display: inline-block;"></span>
+                                    AVAILABLE    
+                                    </i>
+                                </div>
+                            </div>
+                            <div class="row" style="background-color: #8a3218; width: 100%; margin-bottom: 10px;">
+                                <div class="col-1">
+                                    <h3>#3</h3>
+                                </div>
+                                <div class="col-8">
+                                    <h5>DISCRETE MATHEMATICS AND ITS APPLICATIONS</h5>
+                                </div>
+                                <div class="col">
+                                   <i>
+                                    BORROWED 3 TIMES <br>
+                                    <span style="height: 10px; width: 10px; background-color: #cc6600; border-radius: 50%; display: inline-block;"></span>
+                                    UNAVAILABLE
+                                   </i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+        </div>
     </div>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>

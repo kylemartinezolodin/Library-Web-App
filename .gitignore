@@ -1,5 +1,6 @@
 # OLODIN CUSTOM .gitignore specs
 venv/
+code43/
 quick_runserver.bat
 node_modules
 
