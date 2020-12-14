@@ -9,7 +9,7 @@ import { RoughnessMipmapper } from '../vendor/three.js/examples/jsm/utils/Roughn
 let camera, controls, scene, renderer;
 
 let viewport_container, feature_container;
-let button1, button2, button3
+let button1, button2, button3, button4, button5;
 
 let widthOffset = 0; // SCROLL OVERFLOW PRUPOSE
 
@@ -18,6 +18,8 @@ var gltfRef; // NOT WORKING, FIX LATER
 button1 = document.querySelector("#but1");
 button2 = document.querySelector("#but2");
 button3 = document.querySelector("#but3");
+button4 = document.querySelector("#but4");
+button5 = document.querySelector("#but5");
 
 
 init();
@@ -34,13 +36,13 @@ function init() {
     feature_container = document.querySelector("#map_container");
 
     camera = new THREE.PerspectiveCamera( 45, (viewport_container.offsetWidth - widthOffset) / viewport_container.offsetHeight, 0.25, 50 );
-    camera.position.set( - 1.8, 0.6, 2.7 );
+    // camera.position.set( - 1.8, 0.6, 2.7 );
 
     scene = new THREE.Scene();
 
     new RGBELoader()
         .setDataType( THREE.UnsignedByteType )
-        .setPath( '../../static/map/assets/environment/equirectangular/' ) // IT'S RELATIVE TO THE INDEX.HTML LOCATION
+        .setPath( '../../../static/map/assets/environment/equirectangular/' ) // WE HAVE TO ACCESS [localhost_ip]:[port]/static/ URI TO ACCESS STATIC FILES
         .load( 'royal_esplanade_1k.hdr', function ( texture ) {
 
             const envMap = pmremGenerator.fromEquirectangular( texture ).texture;
@@ -58,13 +60,13 @@ function init() {
             // use of RoughnessMipmapper is optional
             const roughnessMipmapper = new RoughnessMipmapper( renderer );
 
-            const loader = new GLTFLoader().setPath( '../../static/map/assets/models/gltf/library/' ); // IT'S RELATIVE TO THE INDEX.HTML LOCATION
-            loader.load( 'library 0.2.glb', function ( gltf ) {
+            const loader = new GLTFLoader().setPath( '../../../static/map/assets/models/gltf/library/' ); // WE HAVE TO ACCESS [localhost_ip]:[port]/static/ URI TO ACCESS STATIC FILES
+            loader.load( 'library 0.3.glb', function ( gltf ) {
 
                 gltf.scene.traverse( function ( child ) {
 
                     if ( child.isMesh ) {
-
+                        child.castShadow = true;
                         // TOFIX RoughnessMipmapper seems to be broken with WebGL 2.0
                         // roughnessMipmapper.generateMipmaps( child.material );
 
@@ -101,7 +103,10 @@ function init() {
     controls.addEventListener( 'change', render ); // use if there is no animation loop
     controls.minDistance = 2;
     controls.maxDistance = 10;
-    controls.target.set( 0, 0, - 0.2 );
+
+    camera.position.set( -4.7637, 7.0294, 11.6093);
+    controls.target.set( 1.6273, 2.6682, 5.2742);
+
     controls.update();
 
     
@@ -120,21 +125,33 @@ function init() {
     
     // button1.addEventListener( 'click',moveCamera( -2.5121, 3.8016, 6.7234)); // THIS WILL NOT WORK SINCE YOU CANNOT PASS ARGUEMENTS DIRECTLY
     button1.addEventListener( 'click', function() {
-        moveCamera( 7.9855, 4.2529, -5.6710);
-        moveControl(14.2264, 0.1408, 0.9729);
+        moveCamera(9.1933, 2.8464, -2.4809);
+        moveControl(3.5139, 0.1404, -8.3060);
         document.querySelector("#description_container").innerHTML = document.querySelector("#area-1_description").innerHTML
     });
     
     button2.addEventListener( 'click', function() {
-        moveCamera( 1.2725,  4.1102, .9480);
-        moveControl(6.1561, 0.2615, 8.661);
+        moveCamera( 5.4523, 3.9139, 9.9887);
+        moveControl(13.7424, -0.4472, 6.4881);
         document.querySelector("#description_container").innerHTML = document.querySelector("#area-2_description").innerHTML
     });
 
     button3.addEventListener( 'click', function() {
-        moveCamera( -5.7231, 2.5252, -8.6223);
-        moveControl(-2.5674, 0.6147, 0.6722);
+        moveCamera( 1.2378, 3.2207, 3.2493);
+        moveControl(-6.0162, -0.2606, 9.1871);
         document.querySelector("#description_container").innerHTML = document.querySelector("#area-3_description").innerHTML
+    });
+
+    button4.addEventListener( 'click', function() {
+        moveCamera( -3.7480, 2.8695, 3.9110);
+        moveControl(1.7488, 0.6344, 11.9602);
+        document.querySelector("#description_container").innerHTML = document.querySelector("#area-4_description").innerHTML
+    });
+
+    button5.addEventListener( 'click', function() {
+        moveCamera( -6.9277, 5.4110, 11.224);
+        moveControl( 0.2764, 1.0498, 5.8317);
+        document.querySelector("#description_container").innerHTML = document.querySelector("#area-5_description").innerHTML
     });
 
     console.log("viewport_container-dimensions testing 2 width: " +viewport_container.offsetWidth +" height: " +viewport_container.offsetHeight);

@@ -8,6 +8,11 @@
 		{% load static %} <!-- DJANGO CONVENTION -->
 		<link rel="stylesheet" href="{% static 'map/css/map.css' %}">
 		<link type="text/css" rel="stylesheet" href="{% static 'map/css/main.css'%}">
+		<style>
+			.debug{
+				display: none;
+			}
+		</style>
 	</head>
 
 	<body class="map">
@@ -24,37 +29,57 @@
 
 			<div class="map-area-panel">
 				<div id="description_container" class="map-area-info">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-					Vero animi voluptatem suscipit laborum temporibus, laboriosam modi consequatur quae ipsam dolor accusantium, 
-					error facere quo maiores iste similique necessitatibus voluptates sunt.
+					<h2>CITU Library Map</h2><br>
+					The Library Map aims in teaching you where various section 
+					of the library can be found as well as define each sections 
+					in the libarry.
 				</div>
 				<div class="map-area-buttons">
-					<button id="but1" class="map-button">Area 1</button>
-					<button id="but2" class="map-button">Area 2</button>
-					<button id="but3" class="map-button">Area 3</button>
+					<button id="but1" class="map-button">Technology [Circulation Section]</button>
+					<button id="but2" class="map-button">Periodicals Section</button>
+					<button id="but3" class="map-button">Reference Section</button>
+					<button id="but4" class="map-button">Conference Booth 1</button>
+					<button id="but5" class="map-button">Library Lounge 1</button>
 				</div>
 				
-				<input style="display: none;" type="text" name="" id="Cx" value="Cx: ">
+				<!-- <input style="display: none;" type="text" name="" id="Cx" value="Cx: ">
 				<input style="display: none;" type="text" name="" id="Cy" value="Cy: ">
 				<input style="display: none;" type="text" name="" id="Cz" value="Cz: ">
 				
 				<input style="display: none;" type="text" name="" id="Tx" value="Tx: ">
 				<input style="display: none;" type="text" name="" id="Ty" value="Ty: ">
-				<input style="display: none;" type="text" name="" id="Tz" value="Tz: ">
+				<input style="display: none;" type="text" name="" id="Tz" value="Tz: "> -->
+
+				
+				<input class="debug" type="text" name="" id="Cx" value="Cx: ">
+				<input class="debug" type="text" name="" id="Cy" value="Cy: ">
+				<input class="debug" type="text" name="" id="Cz" value="Cz: ">
+				
+				<input class="debug" type="text" name="" id="Tx" value="Tx: ">
+				<input class="debug" type="text" name="" id="Ty" value="Ty: ">
+				<input class="debug" type="text" name="" id="Tz" value="Tz: ">
 
 				<div id="area-1_description" style="display: none;">
-					<h2>Area 1</h2><br>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores a aperiam iusto. Tempora, mollitia. <br>
-					Lorem ipsum dolor sit?
+					<h2>Technology Section</h2><br>
+					Contain various programming book in languges such as python, C/C++, java, etc.
 				</div>
 				<div id="area-2_description" style="display: none;">
-					<h2>Area 2</h2><br>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam doloribus ab facere sunt a doloremque repudiandae eveniet unde dolorem, laborum maiores enim?
+					<h2>Periodicals Section</h2><br>
+					Journals currently subscribed and journals received as gift are displayed in the shelves in this section. News papers and popular magazines are also available for reading within the section.
 				</div>
 				<div id="area-3_description" style="display: none;">
-					<h2>Area 3</h2><br>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro harum doloremque tempora dolore reiciendis numquam id perspiciatis nemo. <br>
-					Lorem ipsum dolor sit amet consectetur.
+					<h2>Reference Section</h2><br>
+					This is the place to go to find dictionaries, encyclopedias, almanacs, 
+					bibliographies and other books needed to look up when specific information 
+					is needed such as eographical, historical, political and economic maps and atlases. 
+				</div>
+				<div id="area-4_description" style="display: none;">
+					<h2>Booth 1</h2><br>
+					Booths near the entrance; Has Multimedia equipemnts, 4 chairs 1 table
+				</div>
+				<div id="area-5_description" style="display: none;">
+					<h2>Lounge 1</h2><br>
+					The area where you can enjoy reading, can be found right away upon entering the library
 				</div>
 			</div>
 		</div>	
