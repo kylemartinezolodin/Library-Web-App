@@ -16,3 +16,6 @@ __pycache__
 *.pyc
 *.db
 *.pid
+
+# HILACAN CUSTOM 
+env/

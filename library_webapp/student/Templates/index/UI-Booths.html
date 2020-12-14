@@ -247,10 +247,10 @@
           margin-right: 20px;
         }
         .wrapper .main-container{
-          width: (100% - 250px);
-          margin-top: 80px;
+          width: calc(100% - 250px);
+          margin-top: 70px;
           margin-left: 250px;
-          padding: 20px;
+          padding: 0px;
           background-size:cover;
           height: 100vh;
           transition: 0.3s;
@@ -432,48 +432,30 @@
         </div>
         <!--movile navigation bar end-->
         <!--sidebar start -->
-    <div class="sidebar">
-      <div class="sidebar-menu">
-        <li class="item">
-          <a  class="menu-btn" href="UI-Announcement.html"><i class="fas fa-bullhorn"></i><span>ANNOUNCEMENT</span> </a>
-        </li>
-        <li class="item">
-          <a  class="menu-btn" href="UI-Books.html"><i class="fas fa-book-open"></i><span>BOOKS</span></a>
-        </li>
-        <li class="item">
-          <a  href="#" class="menu-btn" ><i class="fa fa-desktop"></i><span>BOOTHS & &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;COMPUTERS</span></a>
-        </li>
-        <li class="item">
-          <a  class="menu-btn" href="UI-Map.html"><i class="fas fa-map"></i><span>MAP</span></a>
-        </li>
-        <li class="item">
-          <a  class="menu-btn" href="UI-Alfred.html"><i class="fas fa-comment-alt"></i><span>ALFRED</span></a>
-        </li>
-      </div>
-    </div>
+        <div class="sidebar">
+          <div class="sidebar-menu">
+            <li class="item">
+              <a  class="menu-btn" href="{% url 'student:StudentIndexView' %}"><i class="fas fa-bullhorn"></i><span>ANNOUNCEMENT</span> </a>
+            </li>
+            <li class="item">
+              <a  class="menu-btn" href="{% url 'student:BookView' %}"><i class="fas fa-book-open"></i><span>BOOKS</span></a>
+            </li>
+            <li class="item">
+              <a  href="#" class="menu-btn" ><i class="fa fa-desktop"></i><span>BOOTHS & &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;COMPUTERS</span></a>
+            </li>
+            <li class="item">
+              <a  class="menu-btn" href="{% url 'student:MapView' %}"><i class="fas fa-map"></i><span>MAP</span></a>
+            </li>
+            <li class="item">
+              <a  class="menu-btn" href="{% url 'student:AlfredView' %}"><i class="fas fa-comment-alt"></i><span>ALFRED</span></a>
+            </li>
+          </div>
+        </div>
         <!--sidebar end-->
         <!-- main container start-->
         <div class="main-container">
           <!-- CONTENT HERE -->
-            <!--1st Content-->
-            <div class="content">
-                <h5 style="color: white; background-color: #8a3218; margin: -20px 1000px 30px -20px; padding: 8px;">YESTERDAY</h5>
-              <div class="container">
-                  <center>
-                <div class="input-container">
-                <p id="text-input">BOOTHS AND COMPUTERS!</p>&nbsp;
-                </div>
-            <div class="control-container">
-              <a href="#" id="play-btn" ><i class="fas fa-volume-up"></i></a>
-            </div>
-          </center>
-          <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-               Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span>
-          </div>
-          </div>
-          <!--2nd Content-->
 
-            <!--3rd Content-->
         </div>
         <!-- main container end-->
       </div>

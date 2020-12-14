@@ -431,25 +431,25 @@
     </div>
     <!--movile navigation bar end-->
     <!--sidebar start -->
-<div class="sidebar">
-  <div class="sidebar-menu">
-    <li class="item">
-      <a href="#" class="menu-btn"><i class="fas fa-bullhorn"></i><span>ANNOUNCEMENT</span></a>
-    </li>
-    <li class="item">
-      <a  class="menu-btn" href="UI-Books.html"><i class="fas fa-book-open"></i><span>BOOKS</span></a>
-    </li>
-    <li class="item">
-      <a  class="menu-btn" href="UI-Booths.html"><i class="fa fa-desktop"></i><span>BOOTHS & &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;COMPUTERS</span></a>
-    </li>
-    <li class="item">
-      <a  class="menu-btn" href="{% url 'student:MapView' %}"><i class="fas fa-map"></i><span>MAP</span></a>
-    </li>
-    <li class="item">
-      <a  class="menu-btn" href="{% url 'student:AlfredView' %}"><i class="fas fa-comment-alt"></i><span>ALFRED</span></a>
-    </li>
-  </div>
-</div>
+    <div class="sidebar">
+      <div class="sidebar-menu">
+        <li class="item">
+          <a href="#" class="menu-btn"><i class="fas fa-bullhorn"></i><span>ANNOUNCEMENT</span></a>
+        </li>
+        <li class="item">
+          <a  class="menu-btn" href="{% url 'student:BookView' %}"><i class="fas fa-book-open"></i><span>BOOKS</span></a>
+        </li>
+        <li class="item">
+          <a  class="menu-btn" href="{% url 'student:BoothView' %}"><i class="fa fa-desktop"></i><span>BOOTHS & &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;COMPUTERS</span></a>
+        </li>
+        <li class="item">
+          <a  class="menu-btn" href="{% url 'student:MapView' %}"><i class="fas fa-map"></i><span>MAP</span></a>
+        </li>
+        <li class="item">
+          <a  class="menu-btn" href="{% url 'student:AlfredView' %}"><i class="fas fa-comment-alt"></i><span>ALFRED</span></a>
+        </li>
+      </div>
+    </div>
     <!--sidebar end-->
     <!-- main container start-->
     <div class="main-container">
