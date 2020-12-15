@@ -36,8 +36,8 @@ body {
 .interface-division_container {
     margin: 0.9vw;
     width: 50%;
-    height: 15vw;
-
+    min-height: 20vw;
+    height: min-content;
     background-color: #8a3218;
 }
 
@@ -90,7 +90,7 @@ body {
 
 .trends_display {
     display: block;
-    height: 85%;
+    height: 18vw;
     margin: 0 auto;
     margin-top: 1%;
 }

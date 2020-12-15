@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    {% load static%}
     <meta charset="utf-8">
     <meta name="viewpoart" content="width=device-width, initial-scale=1.0" >
     <title>LibraryDashboard</title>
@@ -392,6 +393,14 @@
             display: block;
           }
         }
+
+        /* OLODIN */
+        .side-logo {
+          width: auto;
+          height: 2.6vw;
+          margin-top: 1vw;
+          margin-left: 1vw;
+        }
     </style>
   </head>
   <body>
@@ -401,8 +410,9 @@
       <div class="wrapper">
         <!--header menu start -->
         <div class ="header">
+          <img class="side-logo" src="{% static 'student/img/logo.png' %}" alt="">
           <div class="header-menu">
-            <div class="title"><i class="fas fa-book-open fa-lg"></i>&thinsp;Library<span>Web app</span></div>
+            <!-- <div class="title"><i class="fas fa-book-open fa-lg"></i>&thinsp;Library<span>Web app</span></div>
             <div class="sidebar-btn">
               <i class="fas fa-bars"></i>
             </div>
@@ -413,7 +423,7 @@
                     <div class="search-icon__glass"></div>
                     <div class="search-icon__handle"></div>
                 </div>
-            </div>
+            </div> -->
           </div>
         </div>
         <!--header menu end -->

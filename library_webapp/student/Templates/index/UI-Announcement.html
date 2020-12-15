@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewpoart" content="width=device-width, initial-scale=1.0" >
     <title>LibraryDashboard</title>
+    {% load static %}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <script type="text/javascript" charset="utf-8" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -392,6 +393,14 @@
             display: block;
           }
         }
+
+        /* OLODIN */
+        .side-logo {
+          width: auto;
+          height: 2.6vw;
+          margin-top: 1vw;
+          margin-left: 1vw;
+        }
     </style>
   </head>
   <body>
@@ -400,19 +409,27 @@
   <div class="wrapper">
     <!--header menu start -->
     <div class ="header">
-      <div class="header-menu">
-        <div class="title"><i class="fas fa-book-open fa-lg"></i>&thinsp;Library<span>Web app</span></div>
-        <div class="sidebar-btn">
-          <i class="fas fa-bars"></i>
+        <img class="side-logo" src="{% static 'student/img/logo.png' %}" alt="">
+        <div class="title">
+          
+          <!-- <i class="fas fa-book-open fa-lg"></i>
+          &thinsp;Library
+          <span>Web app</span> -->
         </div>
-        <div class="search-icon">
+        <div class="header-menu">
+          <!-- <div class="sidebar-btn">
+            <i class="fas fa-bars"></i>
+          </div> -->
+
+        <!-- <div class="search-icon">
             <input class="search-icon__input" placeholder="search ...">
 
             <div class="search-icon__wrapper">
                 <div class="search-icon__glass"></div>
                 <div class="search-icon__handle"></div>
             </div>
-        </div>
+        </div> -->
+
       </div>
     </div>
     <!--header menu end -->
