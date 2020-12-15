@@ -290,7 +290,7 @@
         }
         .wrapper .main-container .content .container span{
 
-          color :#fff;'
+          color :#fff;
         }
         .wrapper .main-container .content .container p{
           display: inline-block;
@@ -405,14 +405,6 @@
         <div class="sidebar-btn">
           <i class="fas fa-bars"></i>
         </div>
-        <div class="search-icon">
-            <input class="search-icon__input" placeholder="search ...">
-
-            <div class="search-icon__wrapper">
-                <div class="search-icon__glass"></div>
-                <div class="search-icon__handle"></div>
-            </div>
-        </div>
       </div>
     </div>
     <!--header menu end -->
@@ -461,7 +453,7 @@
             <div  >
               <i style="color:#ffff" display class="fas fa-book-open fa-8x"></i>&thinsp;<span style="color:#ffff; display:block;"> Library Web app</span>
             </div>
-            <div  style="display:block; float:">
+            <div  style="display:block;">
               <center>
             <div class="input-container">
             <p id="text-input-1" >LIBRARY WEEKLY ANNOUNCEMENT</p>&nbsp;
@@ -519,10 +511,10 @@
       speechSynthesis.speak(msg)
     }
 
-    const searchIcon = document.querySelector(".search-icon__wrapper");
-      $(document).ready(function(){
-        searchIcon.addEventListener("click", e => searchIcon.parentElement.classList.toggle("open"))
-      });
+    // const searchIcon = document.querySelector(".search-icon__wrapper");
+    //   $(document).ready(function(){
+    //     searchIcon.addEventListener("click", e => searchIcon.parentElement.classList.toggle("open"))
+    //   });
 
     //SideBarFunction
     $(document).ready(function(){
